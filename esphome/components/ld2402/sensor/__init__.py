@@ -1,12 +1,7 @@
 import esphome.codegen as cg
 from esphome.components import sensor
 import esphome.config_validation as cv
-from esphome.const import (
-    CONF_ID,
-    CONF_DISTANCE,
-    DEVICE_CLASS_DISTANCE,
-    UNIT_CENTIMETER,
-)
+from esphome.const import CONF_DISTANCE, CONF_ID, DEVICE_CLASS_DISTANCE, UNIT_CENTIMETER
 
 from .. import CONF_LD2402_ID, LD2402Component, ld2402_ns
 
