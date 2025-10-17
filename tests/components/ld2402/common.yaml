@@ -1,0 +1,53 @@
+ld2402:
+  id: my_ld2402
+  uart_id: uart_bus
+
+binary_sensor:
+  - platform: ld2402
+    has_target:
+      name: Presence
+
+button:
+  - platform: ld2402
+    apply_config:
+      name: Apply Config
+    factory_reset:
+      name: Factory Reset
+    restart_module:
+      name: Restart Module
+    revert_config:
+      name: Undo Edits
+
+number:
+  - platform: ld2402
+    presence_timeout:
+      name: Detection Presence Timeout
+    max_distance:
+      name: Detection Max Distance
+    gate_0:
+      move_threshold:
+        name: Gate 0 Move Threshold
+      micro_threshold:
+        name: Gate 0 Micro Threshold
+    gate_1:
+      move_threshold:
+        name: Gate 1 Move Threshold
+      micro_threshold:
+        name: Gate 1 Micro Threshold
+
+select:
+  - platform: ld2402
+    operating_mode:
+      name: Operating Mode
+
+sensor:
+  - platform: ld2402
+    distance:
+      name: "Distance (cm)"
+
+text_sensor:
+  - platform: ld2402
+    fw_version:
+      name: LD2402 Firmware
+    serial_number:
+      name: LD2402 Serial Number
